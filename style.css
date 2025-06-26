@@ -84,7 +84,7 @@ body {
     left: 200px;
     width: 275px;
     height: 175px;
-    animation: moveCloud1 ease-in-out forwards;
+    animation: moveCloud1 12s ease-in-out 1 forwards;
 }
 
 .cloud2 {
@@ -93,7 +93,7 @@ body {
     right: 200px;
     width: 275px;
     height: 175px;
-    animation: moveCloud2 7s ease-in-out forwards;
+    animation: moveCloud2 12s ease-in-out forwards;
 }
 
 .cloud3 {
@@ -102,5 +102,50 @@ body {
     left: 350px;
     width: 275px;
     height: 175px;
-    animation: moveCloud2 8s ease-in-out forwards;
+    animation: moveCloud3 12s ease-in-out forwards;
+}
+
+@keyframes moveCloud1 {
+  0% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(-120vw);
+  }
+  41% {
+    transform: translateX(120vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveCloud2 {
+  0% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(120vw);
+  }
+  41% {
+    transform: translateX(-120vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveCloud3 {
+  0% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(-120vw);
+  }
+  41% {
+    transform: translateX(120vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
