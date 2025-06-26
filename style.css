@@ -64,3 +64,43 @@ body {
     background-color: whitesmoke;
     box-shadow: 0 0 10px #ffffff, inset -10px -10px 30px #ccc;
 }
+
+.links a i {
+  margin-right: 10px;
+}
+
+.cloud {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+    animation-fill-mode: forwards;
+    pointer-events: none;
+}
+
+.cloud1 {
+    background-image: url('images/cloud1.svg');
+    top: 100px;
+    left: 200px;
+    width: 275px;
+    height: 175px;
+    animation: moveCloud1 ease-in-out forwards;
+}
+
+.cloud2 {
+    background-image: url('images/cloud2.svg');
+    top: 250px;
+    right: 200px;
+    width: 275px;
+    height: 175px;
+    animation: moveCloud2 7s ease-in-out forwards;
+}
+
+.cloud3 {
+    background-image: url('images/cloud3.svg');
+    bottom: 120px;
+    left: 350px;
+    width: 275px;
+    height: 175px;
+    animation: moveCloud2 8s ease-in-out forwards;
+}
