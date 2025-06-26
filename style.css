@@ -13,6 +13,7 @@ body {
     background-color: #5c85c3;
     color: whitesmoke;
     text-align: center;
+    overflow-x: hidden;
 }
 
 .pfp img {
@@ -108,44 +109,75 @@ body {
 @keyframes moveCloud1 {
   0% {
     transform: translateX(0);
+    opacity: 1;
+  }
+  39% {
+    opacity: 1;
   }
   40% {
     transform: translateX(-120vw);
+    opacity: 0;
   }
   41% {
     transform: translateX(120vw);
+    opacity: 0;
+  }
+  42% {
+    opacity: 1;
   }
   100% {
     transform: translateX(0);
+    opacity: 1;
   }
 }
 
 @keyframes moveCloud2 {
   0% {
     transform: translateX(0);
+    opacity: 1;
+  }
+  39% {
+    opacity: 1;
   }
   40% {
     transform: translateX(120vw);
+    opacity: 0;
   }
   41% {
     transform: translateX(-120vw);
+    opacity: 0;
+  }
+  42% {
+    opacity: 1;
   }
   100% {
     transform: translateX(0);
+    opacity: 1;
   }
 }
 
 @keyframes moveCloud3 {
   0% {
     transform: translateX(0);
+    opacity: 1;
+  }
+  39% {
+    opacity: 1;
   }
   40% {
     transform: translateX(-120vw);
+    opacity: 0;
   }
   41% {
     transform: translateX(120vw);
+    opacity: 0;
+  }
+  42% {
+    opacity: 1;
   }
   100% {
     transform: translateX(0);
+    opacity: 1;
   }
 }
+
