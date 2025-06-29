@@ -83,6 +83,7 @@ body {
     margin-right: 10px;
 }
 
+/* day time */
 .cloud {
     position: absolute;
     background-repeat: no-repeat;
@@ -117,6 +118,12 @@ body {
     width: 275px;
     height: 175px;
     animation: moveCloud3 12s ease-in-out forwards;
+}
+
+.moon,
+.star {
+  display: none;
+  position: absolute;
 }
 
 /* linear cloud animations */
@@ -195,6 +202,118 @@ body {
   }
 }
 
+/* night time*/
+.toggle {
+  position: absolute;
+  cursor: pointer;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 30px;
+}
+
+.toggle input {
+  display: none;
+}
+
+.icon-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border-radius: 30px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  transition: background 0.8s ease;
+  background: #ffda70; /*light color for toggling - default*/
+  color: black;
+}
+
+.icon-wrapper i {
+  font-size: 15px;
+  transition: transform 0.8s ease;
+}
+
+input:checked + .icon-wrapper {
+  background: black; /*dark color for toggling*/
+  color: #fff;
+}
+
+input:checked + .icon-wrapper .fa-sun {
+  transform: scale(0);
+  opacity: 0;
+}
+
+input:checked + .icon-wrapper .fa-moon {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.fa-moon {
+  transform: scale(0);
+  opacity: 0;
+}
+
+body.dark-mode {
+  background-color: midnightblue;
+  color: #e0e0e0;
+}
+
+body.dark-mode .cloud{
+  display: none;
+}
+
+.moon {
+  top: 50px;
+  left: 10%;
+  width: 150px;
+  height: 150px;
+  background: url('images/moon.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.star {
+  width: 50px;
+  height: 50px;
+  background-image: url('images/star.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: twinkle 2s infinite ease-in-out;
+  z-index: -1;
+}
+
+.star1 { 
+  top: 200px; 
+  left: 28%;  
+  rotate: 45deg;
+}
+
+.star2 { 
+  top: 200px; 
+  right: 28%; 
+}
+
+.star3 { 
+  top: 100px; 
+  right: 10%; 
+  rotate: 300deg;
+}
+
+body.dark-mode .moon,
+body.dark-mode .star {
+  display: block;
+}
+
+/* twinkling */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.8; transform: scale(1); }
+  50% { opacity: 0.2; transform: scale(1.5); }
+}
+
 /* responsiveness for mobile display */
 @media (max-width: 600px) {
 
@@ -246,3 +365,4 @@ body {
     left: 50px;
   }
 }
+
